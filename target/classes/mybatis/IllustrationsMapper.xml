@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.accp.mapper.IllustrationsMapper">
+  <update id="update" parameterType="Illustrations">
+  	update 
+  		common_illustrations
+  	set
+  		<if test="picture != null and picture.length() >0">
+  			picture=#{picture},
+  		</if>
+  		title=#{title},
+  		theme=#{theme},
+  		author=#{author},
+  		datetime=#{datetime}
+  	where 
+  		id=#{id}
+  </update>
+</mapper>

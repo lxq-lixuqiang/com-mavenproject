@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.AnimationInfoMapper">
+	<select id="findAnimationInfoByNameAndType" resultMap="animationInfoAndClassification">
+		select 
+			*
+		from 
+			animation_info
+		inner join
+			animation_classification
+		on
+			animation_info.classificationId=animation_classification.id
+		where 
+			1=1
+			<if test="year != null and year.length() >0">
+				and animationDate like concat('%',#{year},'%')
+			</if>
+			<if test="animationName != null and animationName.length() >0">
+				and animationName like concat('%',#{animationName},'%')
+			</if>
+			<if test="animationType != null and animationType.length() >0">
+				and animationType like concat('%',#{animationType},'%')
+			</if>
+			<if test="animationQuarter != null and animationQuarter.length() >0">
+				and animationQuarter like concat('%',#{animationQuarter},'%')
+			</if>
+	</select>
+	<resultMap id="animationInfoAndClassification" type="AnimationInfo">
+		<result property="classificationId.name" column="name"/>
+	</resultMap>
+	
+	<select id="findAnimationInfoById" resultMap="AnimationInfoAndClassificationId" >
+		select 
+			* 
+		from 
+			animation_info 
+		where 
+			id=#{id}
+	</select>
+	<resultMap id="AnimationInfoAndClassificationId" type="AnimationInfo">
+		<result property="classificationId.id" column="classificationId"/>
+	</resultMap>
+	
+	<update id="update" parameterType="AnimationInfo">
+		update
+			animation_info
+		set
+			<if test="animationPicture != null and animationPicture.length > 0">
+				animationPicture=#{animationPicture},
+			</if>
+			animationName=#{animationName},
+			animationQuarter=#{animationQuarter},
+			animationType=#{animationType},
+			animationDate=#{animationDate},
+			classificationId=#{classificationId.id},
+			animationContent=#{animationContent}
+		where
+			id=#{id}
+	</update>
+	
+
+</mapper>

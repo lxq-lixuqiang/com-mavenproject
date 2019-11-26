@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.GameMapper">
+	<select id="findGameByNameAndType" resultMap="GameAndTypeAndPlatformAndClassification">
+		select 
+			*
+		from
+			t_game
+		inner join game_platform on game_platform.id=platformId
+		inner join game_classification on game_classification.id=classificationId
+		inner join game_type on game_type.id=typeId
+		where
+			1=1
+			<if test="nameAndType != null and nameAndType.length>0">
+				and name like concat('%',#{nameAndType},'%') or typeName like concat('%',#{nameAndType},'%')
+			</if>
+	</select>
+	<resultMap id="GameAndTypeAndPlatformAndClassification" type="Game">
+		<result property="platformId.id" column="platformId"/>
+		<result property="platformId.platformName" column="platformName"/>
+		<result property="classificationId.id" column="classificationId"/>
+		<result property="classificationId.classificationName" column="classificationName"/>
+		<result property="typeId.id" column="typeId"/>
+		<result property="typeId.typeName" column="typeName"/>
+	</resultMap>
+	
+	<select id="findGameById" resultMap="GameAndTypeAndPlatformAndClassification">
+		select 
+			*
+		from 
+			t_game
+		inner join game_platform on game_platform.id=platformId
+		inner join game_classification on game_classification.id=classificationId
+		inner join game_type on game_type.id=typeId
+		where	
+			t_game.id=#{id}
+	</select>
+	
+	<update id="update" parameterType="Game" >
+		update
+			t_game
+		set
+			<if test="picture != null and picture.length()>0 ">
+				picture=#{picture},
+			</if>
+			name=#{name},
+			platformId=#{platformId.id},
+			language=#{language},
+			issuer=#{issuer},
+			typeId=#{typeId.id},
+			classificationId=#{classificationId.id},
+			<if test="game !=null and game.length()>0">
+				game=#{game},
+			</if>
+			gamePath=#{gamePath},
+			content=#{content},
+			gameExplain=#{gameExplain},
+			date=#{date}
+		where
+			id=#{id}			
+	</update>
+	
+	<select id="findGameByClassificationId" resultMap="GameAndTypeAndPlatformAndClassification">
+		select 
+			* 
+		from 
+			t_game
+		inner join game_platform on game_platform.id=platformId
+		inner join game_classification on game_classification.id=classificationId
+		inner join game_type on game_type.id=typeId
+		where 
+			classificationId=#{classificationId} 
+		order by
+			date desc
+		limit
+			 #{pageSize}
+	</select>
+	
+	<select id="findGameByPlatformId" resultMap="GameAndTypeAndPlatformAndClassification">
+		select 
+			* 
+		from 
+			t_game
+		inner join game_platform on game_platform.id=platformId
+		inner join game_classification on game_classification.id=classificationId
+		inner join game_type on game_type.id=typeId
+		where 
+			platformId=#{platformId} 
+		AND
+			(game !=NULL OR game != '' OR gamePath != '' OR gamePath != NULL)
+		order by
+			date desc
+		limit
+			 #{pageSize}
+	</select>
+	
+	<select id="findGameByClassificationIdAndPlatformIdAndTypeIdAndLanguage" resultMap="GameAndTypeAndPlatformAndClassification">
+		select 
+			*
+		from
+			t_game
+		inner join game_platform on game_platform.id=platformId
+		inner join game_classification on game_classification.id=classificationId
+		inner join game_type on game_type.id=typeId
+		where
+			1=1
+			<if test="classificationId != null and classificationId != -1">
+				and classificationId=#{classificationId}
+			</if>
+			<if test="platformId != null and platformId != -1">
+				and platformId=#{platformId}
+			</if>
+			<if test="typeId != null and typeId != -1">
+				and typeId=#{typeId}
+			</if>
+			<if test="language != null and language.length > 0">
+				and language=#{language}
+			</if>
+			<if test="name != null and name.length > 0">
+				and name like concat('%',#{name},'%')
+			</if>
+	</select>
+	
+</mapper>

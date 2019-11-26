@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- 配置驱动注解 -->
+	<mvc:annotation-driven validator="validator" />
+	<!-- 配置静态资源路径映射 -->
+	<!-- <mvc:resources location="classpath:static/" mapping="/assets/**" /> -->
+	<mvc:resources location="file:F:/java/commen_upload/static/" mapping="/assets/**" />
+	<mvc:resources location="/uploads/" mapping="/uploads/**" />
+	<!-- 配置拦截器 -->
+	<mvc:interceptors>
+		<!-- 初始化数据 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.accp.web.interceptors.InitialKnowledgeDataInterceptor" />
+		</mvc:interceptor>
+		<!-- 检查用户已登录 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/forgetPassword"/>
+			<mvc:mapping path="/login"/>
+			<mvc:mapping path="/register"/>
+			<mvc:mapping path="/jumpPage"/>
+			<bean class="com.accp.web.interceptors.UserLoginInterceptor" />
+		</mvc:interceptor>
+		<!-- 检查用户没登录 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<mvc:exclude-mapping path="/home"/>
+			<mvc:exclude-mapping path="/animation"/>
+			<mvc:exclude-mapping path="/game"/>
+			<mvc:exclude-mapping path="/music"/>
+			<mvc:exclude-mapping path="/wallpaper"/>
+			<mvc:exclude-mapping path="/jumpPage"/>
+			<mvc:exclude-mapping path="/forgetPassword"/>
+			<mvc:exclude-mapping path="/login"/>
+			<mvc:exclude-mapping path="/findUserImg"/>
+			<mvc:exclude-mapping path="/register"/>
+			<mvc:exclude-mapping path="/findUsername"/>
+			<mvc:exclude-mapping path="/findPhone"/>
+			<mvc:exclude-mapping path="/wallpaperThemeSearch"/>
+			<mvc:exclude-mapping path="/musicSingerSelect"/>
+			<mvc:exclude-mapping path="/musicAndSonger"/>
+			<mvc:exclude-mapping path="/animationInfoFind"/>
+			<mvc:exclude-mapping path="/assets/**"/>
+			<bean class="com.accp.web.interceptors.LoginInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	<!-- 配置扫描的包 -->
+	<context:component-scan base-package="com.accp.web" />
+	<!-- 配置视图扫描器 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<!-- 注入物理视图的前缀 -->
+		<property name="prefix" value="/WEB-INF/views/" />
+		<!-- 注入物理视图的后缀 -->
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<!-- 配置资源管理器(管理国际化语言文件) -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="fileEncodings" value="UTF-8" />
+		<property name="cacheSeconds" value="80" />
+		<property name="basenames">
+			<array>
+				<value>classpath:i18n/messages</value>
+				<value>classpath:i18n/ValidationMessages</value>
+				<value>classpath:org/hibernate/validator/ValidationMessages</value>
+			</array>
+		</property>
+	</bean>
+	<!-- 配置资源解析器(解析国际化语言文件) -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+	<!-- 配置文件上传 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="maxInMemorySize" value="20480" />
+		<property name="maxUploadSize" value="2147483648" />
+		<property name="maxUploadSizePerFile" value="1073741824" />
+	</bean>
+</beans>

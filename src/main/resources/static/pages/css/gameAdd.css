@@ -1,0 +1,64 @@
+.section-botton-right{
+	height:100%;
+}
+#form{
+	width:330px;
+	margin:10px auto;
+	padding-top:10px;
+}
+.divImgHeader{
+	height:150px;
+}
+.imgClass{
+	height:150px;
+}
+.divImg{
+	width:330px;
+	overflow: hidden;
+}
+.position-relative{
+	position: relative;
+}
+.position-absolute{
+	position:absolute;
+	top:0;
+	left:0;
+	width:68px;
+	height:34px;
+	opacity: 0;
+}
+#img,#game{
+	background-color:#fff;
+	width:183px;
+}
+.inputClass{
+	width:250px;
+}
+.inputClass textarea{
+	height: 120px;
+	resize:none;
+}
+.textCenter{
+	width:330px;
+	text-align:center;
+}
+.textCenter>button{
+	margin-right:10px;
+}
+.noticejs-content{
+	font-size:16px;
+}
+.noticejs-body{
+	height:50px;
+	line-height: 30px;	
+}
+
+.errorInfo{
+	color:red;
+	font-size:10px;
+}
+
+.radiobuttonClass{
+	position: relative;
+	font-size:16px;
+}

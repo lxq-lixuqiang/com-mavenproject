@@ -1,0 +1,29 @@
+.foot{
+	background-color:#666666;
+	clear: both;
+}
+.footClass{
+	width:1000px;
+	margin:0 auto;
+	padding-bottom:25px;
+}
+.footClass h3{
+	padding:15px 0 10px;
+	margin:0;
+	font-size: 20px;
+}
+.footClass p{
+	padding-left:40px;
+	margin: 0;
+}
+.footClass p a{
+	font-size:16px;
+	display: inline-block;
+	margin:7px 5px;
+	color:#C5C5C5;
+	text-decoration: none;
+}
+.footClass p a:hover{
+	color:#fff;
+	text-decoration: underline;
+}

@@ -1,0 +1,3 @@
+$('#mytable').SetEditable({
+	$addButton: $('#add')
+});

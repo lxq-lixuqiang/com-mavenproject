@@ -1,0 +1,68 @@
+#imgpath,#name,#issue,#platform,#special,#forum,#remark{
+	width:170px;
+	font-size:18px;
+}
+#gametype{
+	width:174px;
+	height:28px;
+	font-size:18px;
+}
+.session-botton-right-TableUser table{
+	margin:50px 0 60px 40px;
+	width:700px;
+}
+.session-botton-right-TableUser table tr td{
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	height:40px;
+	line-height: 40px;
+}
+.session-botton-right-TableUser table tr:first-of-type td{
+	width:195px;
+}
+.session-botton-right-TableUser table tr td:nth-of-type(1){
+	width:100px;
+}
+.session-botton-right-TableUser table img{
+	width:195px;
+	height:264px;
+	border-radius: 5px;
+	border:2px solid #3399FE;
+}
+.session-botton-right-TableUser table span{
+	color:red;
+	font-size:17px;
+}
+#uploadImg{
+	opacity: 0;
+	position: absolute;
+	height:29px;
+	width:175px;
+	top:7px;
+	background-color:red;
+}
+.positionFile{
+	position: relative;
+}
+.right{
+	text-align:right;
+	font-size:19px;
+}
+
+.updateGameButton{
+	margin-left:20px;
+	margin-top:10px;
+	width:65px;
+	height:35px;
+	line-height:30px;
+	background-color:#23C9ED;
+	color:#fff;
+	font-size:19px;
+	border-radius:5px;
+	border:1px solid #23C9ED;
+}
+.updateGameButton:hover{
+	border:1px solid #16B1D2;
+	background-color:#16B1D2;
+	cursor:pointer;
+}

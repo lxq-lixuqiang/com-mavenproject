@@ -1,0 +1,176 @@
+.ulClass li a{
+	font-size:16px;
+}
+.address{
+	padding-top:15px;
+}
+body{
+	background-color:#fff;
+}
+.header,.cntrolFormat{
+	width:100%;
+}
+.headerFormat{
+	height:50px;
+}
+#log{
+	background-color:#1E222D;
+}
+#log>div{
+	width:1000px;
+	margin:0 auto;
+	padding:30px 0;
+}
+.section{
+	width:1000px;
+	margin:0 auto;
+}
+.musicSingerClass{
+	margin:10px 0;
+	border:1px solid #ADADAD;
+	overflow: hidden;
+}
+.musicSingerClass>div{
+	float: left;
+}
+.musicSingerClass>div>img{
+	width:142px;
+	height:142px;
+}
+.musicSingerClass>div>h4{
+	margin-top:50px;
+	margin-left:30px;
+	font-weight: bold;
+}
+.musicSingerClass>div:last-of-type{
+	width:830px;
+}
+.musicSingerClass>div>p{
+	margin-left:30px;
+	font-size: 14px;
+	color:#ccc;
+}
+
+.musicClass table{
+	width:100%;
+	font-size: 16px;
+}
+.fixdBorder{
+	height:100%;
+}
+#musicTable{
+	height:100%;
+	margin-top:10px;
+}
+.musicClass table td{
+	position: relative;
+	height: 33px;
+}
+.musicClass table td{
+	position: relative;
+	height: 33px;
+}
+.musicClass table>tbody tr:hover{
+	background-color:#DAF1FB;
+}
+.musicClass table>tbody .nullClass:hover{
+	background-color:#fff;
+}
+.musicClass table>thead>tr{
+	border-bottom:4px solid #C2C2C2;
+}
+.musicClass table>thead>tr>th{
+	color:#C2C2C2;
+	height: 30px;
+}
+.musicClass table>thead>tr>th:last-of-type{
+	width:120px;
+}
+.musicClass table>thead>tr>th:nth-of-type(5){
+	width:70px;
+}
+.musicClass table>thead>tr>th:nth-of-type(4){
+	width:50px;
+}
+.musicClass table>thead>tr>th:nth-of-type(2){
+	width:50px;
+}
+.musicClass table>thead>tr>th:first-of-type{
+	width:70px;
+}
+.playLoad{
+	text-align: center;
+}
+.playLoad>img{
+	margin-bottom:3px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+.playMusic{
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:7px;
+	left:10px;
+	cursor: pointer;
+	background: url(../img/common/icon_splice.png) 4px 2px no-repeat;
+}
+.playMusic:hover{
+	background-position: 4px -58px;
+}
+
+.downloadMusic{
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:7px;
+	left:10px;
+	cursor: pointer;
+	background: url(../img/common/icon_splice.png) -87px 2px no-repeat;
+}
+.downloadMusic:hover{
+	background-position: -87px -58px;
+}
+.nullImg{
+	padding-top:100px;
+	text-align: center;
+}
+.nullImg:hover{
+	background-color: #fff;
+}
+
+
+
+#musicPlay{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	background:linear-gradient(to bottom,#fff,#D8EAEC,#59DEE9);
+	box-shadow:0px -1px 5px #A8A8A8;
+}
+#musicPlay>div:first-of-type{
+	margin:0 auto;
+	width:500px;
+	position: relative;
+	height: 0px;
+	text-align: center;
+	left:-18px;
+}
+#player{
+	margin:0 auto;
+	width:600px;
+	height: 70px;
+}
+#SingerName{
+	font-size: 13px;
+}
+#vpplayer{
+	border-width: 0;
+	box-shadow:0 0 0 #fff;
+	transition:all 0.1s;
+}

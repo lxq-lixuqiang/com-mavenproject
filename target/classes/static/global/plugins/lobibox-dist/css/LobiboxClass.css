@@ -1,0 +1,12 @@
+.lobibox.lobibox-confirm .lobibox-header{
+	background-color:#229BDC;
+	border-radius:5px 5px 0 0;
+}
+.lobibox.lobibox-confirm .lobibox-footer {
+	background-color:#FCFCFC;
+	border-radius:0 0 5px 5px;
+}
+.lobibox{
+	border-radius:5px;
+	height:560px;
+}

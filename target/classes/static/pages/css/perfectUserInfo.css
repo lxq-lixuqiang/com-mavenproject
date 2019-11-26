@@ -1,0 +1,71 @@
+.inputClass{
+	border-top-width:0;
+	border-left-width:0;
+	border-right-width:0;
+	font-size:20px;
+	width:180px;
+}
+.inputyClass02{
+	width:290px;
+}
+.myInfo table:last-of-type{
+	padding-top:105px;
+}
+table textarea{
+	vertical-align: middle;
+	font-size:20px;
+	margin-top: 15px;
+}
+table select{
+	font-size:20px;
+}
+.error{
+	margin-left:5px;
+	position: relative;
+	display: none;
+}
+.errorImg{
+	width:25px;
+	height:20px;
+	border-radius:50%;
+	vertical-align: middle;
+}
+.errorInfo{
+	width:160px;
+	height:30px;
+	line-height:30px;
+	border-radius: 5px;
+	position: absolute;
+	text-align: center;
+	color:#FC0E00;
+	font-weight:bold;
+	top:-25px;
+	left:-75px;
+	display: none;
+}
+.errorImg:hover+.errorInfo{
+	display: inline-block;
+}
+.button{
+	margin-top:30px;
+}
+#positions{
+	position: relative;
+}
+#image-holder{
+	height:118px;
+}
+#file{
+	overflow:hidden;
+	opacity:0;
+	position: absolute;
+	width:100px;
+	height:100px;
+	line-height:100px;
+	border-radius:50%;
+	top:0;
+	right:162px;
+}
+#sexSelect{
+	border-width: 0;
+}

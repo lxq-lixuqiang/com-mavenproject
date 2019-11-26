@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.accp.mapper.GameInformationMapper">
+  <select id="findGameInformationByInformationThemeId" resultMap="informationAndInformationTheme" >
+  	select 
+  		* 
+  	from 
+  		game_information
+  	inner join
+  		game_informationTheme
+  	on
+  		game_information.informationThemeId=game_informationTheme.id
+  	where 
+  		informationThemeId=#{informationThemeId} 
+  	order by 
+  		serialNumber asc
+  </select>
+  <resultMap id="informationAndInformationTheme" type="GameInformation">
+  	<result property="informationThemeId.theme" column="theme"/>
+  	<result property="informationThemeId.date" column="date"/>
+  </resultMap>
+  
+  <update id="update" parameterType="GameInformation">
+    update
+    	game_information
+    set
+    	<if test="serialNumber !=null">
+    		serialNumber=#{serialNumber},
+    	</if>
+    	<if test="infoOrImg != null and infoOrImg.length() >0">
+    		infoOrImg=#{infoOrImg},
+    	</if>
+    	infoOrImgType=#{infoOrImgType}
+    where
+    	id=#{id}
+  </update>
+</mapper>

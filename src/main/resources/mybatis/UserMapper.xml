@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.UserMapper">
+  <select id="bynamefind" resultMap="UserAndUserHeadPicture">
+  	SELECT 
+  		* 
+  	FROM 
+  		t_user 
+  	INNER JOIN 
+		user_userheadpicture
+	ON
+		userheadpictureId=user_userheadpicture.id
+  	WHERE 
+  		username = #{username}
+  </select>
+  <resultMap type="User" id="UserAndUserHeadPicture">
+  	<id property="userHeadPicture.id" column="userHeadPictureId"/>
+  	<result property="userHeadPicture.headPicture" column="headPicture"/>
+  </resultMap>
+
+  <select id="findAllUser" resultType="User">
+  	select 
+  		*
+  	from 
+  		t_user 
+  	where 
+  		loginIdentity = 
+  		<choose>
+    		<when test="loginIdentity == '管理员' ">'Administrators'</when>
+    		<otherwise>'User'</otherwise>
+    	</choose>
+  	<if test="username != null and username.length() !=0">
+  		AND username LIKE concat('%',#{username},'%')
+  	</if>
+  </select>
+  
+  <update id="updateUserAllInfo" parameterType="User">
+  	UPDATE 
+  		t_user 
+  	SET 
+  		username = #{username},
+  		phone = #{phone} ,
+  		sex = #{sex,typeHandler=org.apache.ibatis.type.EnumTypeHandler},
+  		hobby = #{hobby},
+  		address = #{address},
+  		email = #{email},
+  	<choose>
+  		<when test="birthData != null">birthData = #{birthData}</when>
+  		<otherwise>birthData = null</otherwise>
+  	</choose>
+  	<if test="userImg !=null and userImg.length() >0">
+  		,userImg = #{userImg}
+  	</if>
+  	WHERE 
+  		id = #{id}
+  </update>
+  
+</mapper>

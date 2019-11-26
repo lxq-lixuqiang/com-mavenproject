@@ -1,0 +1,85 @@
+.header{
+	position:absolute;
+	z-index:99;
+}
+body{
+	padding:0;
+	margin:0;
+}
+#background{
+	background-color:#fff;
+	opacity:0.7;
+	height:50px;
+	width:100%;
+	z-index:-1;
+	position: absolute;
+	box-shadow: 0px 1px 4px #A8A8A8;
+}
+.navigation{
+	height:50px;
+	width:1000px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.zhai{
+	float:left;
+	margin:0 23px;
+	color:#08A5E9;
+	position: relative;
+	left:-5px;
+	top:-3px;
+}
+.zhai>label{
+	font-weight: normal;
+	font-size: 29px;
+	font-weight: normal;
+	font-family: Microsoft YaHei UI;
+}
+.zhai>span{
+	font-size:18px;
+	margin:0 2px;
+	font-weight: normal;
+	font-family: Microsoft YaHei UI;
+}
+.zhai>em{
+	font-weight: normal;
+	font-style:italic;
+	font-size:20px;
+	font-family: Microsoft YaHei UI;
+}
+.ulClass{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.ulClass li{
+	float: left;
+}
+.ulClass li a{
+	color:#000;
+	display: inline-block;
+	text-decoration: none;
+	height: 50px;
+	width:80px;
+	line-height: 50px;
+	text-align: center;
+}
+.ulClass li a:hover{
+	opacity: 0.5;
+	background-color:#fff;
+}
+.userImg{
+	float: right;
+	border-radius: 50%;
+	width:40px;
+	height:40px;
+	vertical-align: middle;
+	margin:4px 9px 4px 0;
+}
+.address{
+	position: absolute;
+	top:12px;
+	font-size:15px;
+	font-family:Segoe Print;
+	color:#08A5E9;
+}

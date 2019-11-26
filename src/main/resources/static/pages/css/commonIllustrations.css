@@ -1,0 +1,75 @@
+.section-botton-right{
+	height:100%;
+}
+.dlClass{
+	width:320px;
+	height:340px;
+	font-size:15px;
+	float:left;
+	padding:10px;
+	overflow: hidden;
+}
+.dlClass>dd>p{
+	margin:0;
+	padding:5px 0;
+}
+.dtClass{
+	width:320px;
+	height:150px;
+}
+.imgClass{
+	height:150px;
+}
+.updateButton{
+	margin-right:30px;
+}
+.pageClass{
+	clear: both;
+}
+
+#pageSizeAndpageNum{
+	margin:0 0 10px;
+}
+#pageSizeAndpageNum ul{
+	text-align:center;
+}
+#pageSizeAndpageNum ul li{
+	display:inline-block;
+	height:28px;
+	line-height:26px;
+	border-radius:4px;
+	font-size:14px;
+	margin:0 3px;
+}
+.ulNotClick{
+	border:1px solid #CDCDCD;
+	color:#000;
+	background-color:#fff;
+	cursor: pointer;
+	padding:0 10px;
+}
+.ulNotClick:hover{
+	border:1px solid #3399FE;
+}
+.ulClick{
+	border:1px solid #3399FE;
+	color:#fff;
+	background-color:#3399FE;
+	padding:0 10px;
+	cursor: default;
+}
+.ulClick:hover{
+	border:1px solid #3399FE;
+}
+.ulreadlyClick{
+	cursor: default;
+	padding:0;
+}
+
+.noticejs-content{
+	font-size:16px;
+}
+.noticejs-body{
+	height:50px;
+	line-height: 30px;	
+}

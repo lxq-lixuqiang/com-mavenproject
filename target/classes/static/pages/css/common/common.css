@@ -1,0 +1,133 @@
+.cntrolFormat{
+	width:1000px;
+	margin:0 auto;
+}
+.headerFormat{
+	height:150px;
+	position: relative;
+}
+ul{
+	list-style: none;
+	padding:0;
+	margin: 0;
+}
+*{
+	outline:none;
+}
+.button,#CloseButton,#Delete,#NoDelete{
+	margin-left:15px;
+	width:75px;
+	height:35px;
+	line-height:30px;
+	color:#fff;
+	font-size:20px;
+	border-radius:5px;
+	border:1px solid #16B1D2;
+	background-color:#16B1D2;
+}
+.button:hover,#CloseButton:hover,#Delete:hover,#NoDelete:hover{
+	background-color:#23C9ED;
+	border:1px solid #23C9ED;
+	cursor:pointer;
+}
+#backgroundMsg{
+	background-color:#000;
+	opacity:0.1;
+	z-index:100;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:none;
+}
+#InfoMsg{
+	background-color:#fff;
+	width:350px;
+	height:210px;
+	position: fixed;
+	z-index: 101;
+	top:35%;
+	left:35%;
+	border-radius: 10px;
+	overflow: hidden;
+	display:none;
+	box-shadow:3px 3px 10px #424141;
+}
+#InfoMsg>p{
+	background-color:#08A5E9;
+	color:#fff;
+	margin:0;
+	height:40px;
+	line-height: 40px;
+	padding-left:10px;
+	font-size: 22px;
+	font-weight: bold;
+}
+#InfoMsg>div{
+	height:120px;
+	line-height: 120px;
+}
+#InfoMsg>div>img{
+	width:60px;
+	height:60px;
+	vertical-align: middle;
+	margin-left:20px;
+	padding:0 0 10px 0;
+}
+#InfoMsgSpan{
+	font-size: 20px;
+	color:red;
+	font-weight: bold;
+	margin-left:10px;
+}
+#CloseButton,#Delete,#NoDelete{
+	float:right;
+	margin-right:20px;
+}
+#Delete,#NoDelete{
+	display: none;
+}
+
+
+.tableCommenClass{
+	line-height:65px;
+}
+.tableCommenClass .lableClass{
+	font-size:15px;
+	color:#333;
+	text-align: right;
+}
+.tableCommenClass .inputyClass{
+	position: relative;
+	width:220px;
+}
+.tableCommenClass .inputyClass>input{
+	border:1px solid #CCCCCC;
+	font-size:15px;
+	height:30px;
+	background-color:#F9FBFC;
+	border-radius: 3px;
+	width:184px;
+	padding-left:5px;
+}
+.tableCommenClass .inputyClass>input:focus{
+	border:1px solid #4D99F9;
+}
+.tableCommenClass .inputyClass>span{
+	position: absolute;
+	font-size:14px;
+	bottom:0;
+	left:5px;
+	color:#CC0000;
+	height:10px;
+	line-height: 10px;
+	width:100%;
+}
+.tableCommenClass .buttonTdClass{
+	line-height:80px;
+}
+
+.inputClass{
+	font-size:16px;
+}

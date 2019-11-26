@@ -1,0 +1,60 @@
+.section-botton-right{
+	height:514px;
+}
+#form{
+	width:330px;
+	margin:10px auto;
+	padding-top:100px;
+}
+.divImgHeader{
+	height:150px;
+}
+.imgClass{
+	height:150px;
+}
+.divImg{
+	width:330px;
+	overflow: hidden;
+}
+.position-relative{
+	position: relative;
+}
+.position-absolute{
+	position:absolute;
+	top:0;
+	left:0;
+	width:68px;
+	height:34px;
+	opacity: 0;
+}
+#music{
+	background-color:#fff;
+	width:183px;
+}
+.inputClass{
+	width:250px;
+}
+.textCenter{
+	width:330px;
+}
+.textCenter>button{
+	margin-left:40px;
+	margin-right:20px;
+}
+
+.noticejs-content{
+	font-size:16px;
+}
+.noticejs-body{
+	height:50px;
+	line-height: 30px;	
+}
+
+.errorInfo{
+	color:red;
+	font-size:10px;
+}
+
+.borderClass{
+	padding-top:30px;
+}

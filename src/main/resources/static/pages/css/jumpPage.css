@@ -1,0 +1,51 @@
+.jumpPage{
+	border:2px solid #F2F2F2;
+	width:550px;
+	height:160px;
+	margin:0 auto;
+	margin-top:10px;
+}
+.jumpPage div{
+	display: inline-block;
+	float:left;
+}
+.jumpPage div:first-of-type{
+	height:150px;
+	line-height:150px;
+	width:100px;
+	text-align: center;
+	margin-left:10px;
+}
+.jumpPage div:last-of-type{
+	margin-top:10px;
+	font-size: 20px;
+	width:435px;
+}
+.jumpPage div img{
+	width:76px;
+	height:76px;
+	vertical-align: middle;
+}
+.jumpPage div p{
+	line-height: 16px;
+	margin:15px 0;
+}
+.jumpPage div p span{
+	color:red;
+	font-weight: bold;
+	padding:0 5px;
+}
+.jumpPage div p a{
+	color:#333;
+	text-decoration: none;
+}
+#toHome:hover{
+	text-decoration: underline;
+}
+#toLogin:hover{
+	color:red;
+}
+#tiShiClass{
+	color:red;
+	font-weight: bold;
+}

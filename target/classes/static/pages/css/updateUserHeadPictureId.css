@@ -1,0 +1,134 @@
+.section-botton{
+	width:960px;
+	box-sizing:border-box;
+	margin:20px;
+	padding:20px;
+	background-color:#fff;
+}
+.pictureClass{
+	overflow: hidden;
+	height:432px;
+}
+.pictureClass li{
+	border:2px solid #fff;
+	padding:10px;
+	float:left;
+	margin:10px;
+	width:400px;
+	height:80px;
+	margin:20px 15px;
+	overflow: hidden;
+}
+.pictureClass li:hover{
+	border:2px solid #3399FE;
+}
+.imgClass{
+	width:400px;
+	height:80px;
+}
+.position-relative{
+	position: relative;
+}
+.pictureClass li .spinkitDiv{
+	position: absolute;
+	top:-400px;
+	left:0;
+	transition:all 0.4s;
+	width:100%;
+	height:100%;
+	opacity: 0;
+}
+.pictureClass li:hover .spinkitDiv{
+	background-color:#000;
+	top:0;
+	left:0;
+	opacity: 0.2;
+}
+.pictureClass li .spinkitP,.pictureClass li .spinkitPClick{
+	transition:all 0.5s;
+	position: absolute;
+	opacity:0;
+	top:-20px;
+	left:170px;
+	padding:5px;
+	cursor: pointer;
+}
+.pictureClass li:hover .spinkitP{
+	opacity:0.8;
+	background-color:#0481FC;
+	top:20px;
+	left:170px;
+	color:#fff;
+}
+.pictureClass li:hover .spinkitP:hover{
+	background-color:#3399FE;
+	opacity:1;
+}
+.pictureClass li:hover .spinkitPClick{
+	opacity:0.8;
+	background-color:#C5C5C5;
+	top:20px;
+	left:180px;
+	color:#fff;
+	color:#797979;
+	cursor: default;
+}
+
+#nullImgDiv{
+	width:100%;
+	height: 100%;
+	text-align: center;
+}
+#nullImg{
+	width:250px;
+	height: 200px;
+	margin-top:80px;
+	margin-bottom:50px;
+}
+#pageSizeAndpageNum{
+	margin:20px 0;
+	clear: both;
+}
+#pageSizeAndpageNum ul{
+	text-align:center;
+}
+#pageSizeAndpageNum ul li{
+	display:inline-block;
+	height:28px;
+	line-height:26px;
+	border-radius:4px;
+	font-size:14px;
+	margin:0 3px;
+}
+.ulNotClick{
+	border:1px solid #CDCDCD;
+	color:#000;
+	background-color:#fff;
+	cursor: pointer;
+	padding:0 10px;
+}
+.ulNotClick:hover{
+	border:1px solid #3399FE;
+}
+.ulClick{
+	border:1px solid #3399FE;
+	color:#fff;
+	background-color:#3399FE;
+	padding:0 10px;
+	cursor: default;
+}
+.ulClick:hover{
+	border:1px solid #3399FE;
+}
+.ulreadlyClick{
+	cursor: default;
+	padding:0;
+}
+
+.noticejs-content{
+	font-size:16px;
+}
+.noticejs-body{
+	height:50px;
+	line-height: 30px;	
+}

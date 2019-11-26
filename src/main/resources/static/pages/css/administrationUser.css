@@ -1,0 +1,61 @@
+.section-botton{
+	width:920px;
+	margin:20px;
+	padding:20px;
+	background-color:#fff;
+}
+.myInfo{
+	overflow: hidden;
+}
+.myInfo table{
+	line-height: 50px;
+	font-size: 22px;
+	margin:0 5px;
+	float:left;
+}
+.myInfo table:first-of-type{
+	width:350px;
+	margin-left: 50px;
+}
+.myInfo table:last-of-type{
+	padding-top:50px;
+	width:470px;
+}
+#userHearderImg{
+	border-radius: 50%;
+	width:100px;
+	height:100px;
+}
+#perfectUserImg{
+	width:30px;
+	height:30px;
+	vertical-align: middle;
+}
+.myInfo table:last-of-type a{
+	color:#000;
+	text-decoration: none;
+}
+.myInfo table:last-of-type a:hover{
+	color:red;
+	text-decoration: underline;
+}
+.myInfo table tr td:first-of-type{
+	text-align: right;
+	width:120px;
+	vertical-align: top;
+}
+.updateInfo{
+	text-align: left;
+}
+.myInfo table:last-of-type a:last-of-type{
+	font-size:14px;
+	color:#333;
+	margin-left:30px;
+	font-weight: normal;
+}
+.myInfo table:last-of-type a:last-of-type:hover{
+	color:#ccc;
+}
+.marginRight{
+	margin-right:80px;
+}

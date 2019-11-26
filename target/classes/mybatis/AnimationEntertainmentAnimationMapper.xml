@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.AnimationEntertainmentAnimationMapper">
+	<select id="findEntertainmentAnimationByNameAndEntertainmentTypeId" resultType="AnimationEntertainmentAnimation" >
+		select 
+			*
+		from
+			animation_entertainmentAnimation
+		where 
+			1=1
+			<if test="name != null and name.length() >0">
+				and name like concat('%',#{name},'%')
+			</if>
+			<if test="entertainmentTypeId !=null and entertainmentTypeId !=-1">
+				and entertainmentTypeId=#{entertainmentTypeId}
+			</if>
+	</select>
+	
+	<update id="update" parameterType="AnimationEntertainmentAnimation">
+		update
+			animation_entertainmentAnimation
+		set
+			<if test="picture != null and picture.length() >0">
+				picture=#{picture},
+			</if>
+			<if test="entertainmentAnimation != null and entertainmentAnimation.length() >0">
+				entertainmentAnimation=#{entertainmentAnimation},
+			</if>
+			name=#{name},
+			entertainmentAnimationPath=#{entertainmentAnimationPath},
+			entertainmentTypeId=#{entertainmentTypeId.id},
+			dateTime=#{dateTime}
+		where
+			id=#{id}
+	</update>
+	
+	<select id="findAnimationEntertainmentAnimationById" resultMap="EntertainmentAndType" >
+		select 
+			* 
+		from 
+			animation_entertainmentAnimation
+		inner join
+			animation_entertainmentType
+		on
+			entertainmentTypeId=animation_entertainmentType.id
+		where
+			animation_entertainmentAnimation.id=#{id}
+	</select>
+	<resultMap id="EntertainmentAndType" type="AnimationEntertainmentAnimation">
+		<id property="entertainmentTypeId.id" column="entertainmentTypeId"/>
+	</resultMap>
+	
+	<select id="findAnimationEntertainmentAnimationByEntertainmentTypeAndPageNumAndPageSize" resultType="AnimationEntertainmentAnimation">
+		select 
+			*
+		from
+			animation_entertainmentAnimation
+			<if test="entertainmentTypeId !=null">
+				where entertainmentTypeId=#{entertainmentTypeId}
+			</if>
+		order by
+			datetime desc
+		limit
+			#{pageNum},#{pageSize}
+	</select>
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.accp.mapper.HomeNavigationBarMapper">
+  <select id="findHomeNavigationBarByTitle" resultType="HomeNavigationBar">
+    select 
+    	*
+    from 
+    	home_navigationBar
+    <if test="title != null and title.length() >0">
+    	where title like concat('%',#{title},'%') 
+    </if>
+  </select>
+  
+  <update id="update" parameterType="HomeNavigationBar">
+  	update
+  		home_navigationBar
+  	set
+  		<if test="picture != null and picture.length()>0">
+  			picture=#{picture},
+  		</if>
+  		title=#{title},
+  		backgroundColor=#{backgroundColor},
+  		date=#{date},
+  		<if test="homeNavigationBar != null and homeNavigationBar.length()>0">
+  			homeNavigationBar=#{homeNavigationBar},
+  		</if>
+  		homeNavigationBarPath=#{homeNavigationBarPath}
+  	where
+  		id=#{id}
+  </update>
+</mapper>

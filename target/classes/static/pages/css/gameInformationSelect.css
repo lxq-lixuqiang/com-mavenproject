@@ -1,0 +1,129 @@
+.controllerSize,.section-botton-right{
+	height: 100%;
+}
+.buttonMarginSize{
+	padding:10px 0;
+}
+.heightFixed{
+	height:100%;
+}
+.imgClass{
+	width:660px;
+	text-align: center;
+	overflow: hidden;
+}
+.imgClass>img{
+	height:300px;
+}
+.divClass{
+	margin:10px;
+	text-align: right;
+}
+.divNumberClass{
+	padding-bottom:5px;
+}
+.liUpdate .position-relative{
+	border:2px solid #5BC0DE;
+	position: relative;
+	overflow: hidden;
+	height:300px;
+	width:660px;
+	overflow: hidden;
+}
+.li>div>.save,
+.li>div>.cancel,
+.li>div>.fileUpload,
+.li .typeClass,
+.li .numberClass,
+.li .contextTextarea,
+.liUpdate>div>.delete,
+.liUpdate>div>.update,
+.liUpdate .type,
+.liUpdate .number,
+.liUpdate .context{
+	display: none;
+}
+.fileUpload{
+	opacity:0;
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+.liUpdate .position-relative02{
+	position: relative;
+	overflow: hidden;
+	height:150px;
+	width:660px;
+}
+.context,.contextTextarea{
+	height: auto;
+	resize:none;
+	display: inline-block;
+	font-size:16px;
+	
+}
+
+
+
+#nullImgDiv{
+	width:100%;
+	height: 100%;
+	text-align: center;
+}
+#nullImg{
+	width:250px;
+	height: 200px;
+	margin-top:80px;
+	margin-bottom:50px;
+}
+#pageSizeAndpageNum{
+	margin:0 0 10px;
+}
+#pageSizeAndpageNum ul{
+	text-align:center;
+}
+#pageSizeAndpageNum ul li{
+	display:inline-block;
+	height:28px;
+	line-height:26px;
+	border-radius:4px;
+	font-size:14px;
+	margin:0 3px;
+}
+.ulNotClick{
+	border:1px solid #CDCDCD;
+	color:#000;
+	background-color:#fff;
+	cursor: pointer;
+	padding:0 10px;
+}
+.ulNotClick:hover{
+	border:1px solid #3399FE;
+}
+.ulClick{
+	border:1px solid #3399FE;
+	color:#fff;
+	background-color:#3399FE;
+	padding:0 10px;
+	cursor: default;
+}
+.ulClick:hover{
+	border:1px solid #3399FE;
+}
+.ulreadlyClick{
+	cursor: default;
+	padding:0;
+}
+#pageSizeAndpageNum{
+	clear: both;
+}
+
+.noticejs-content{
+	font-size:16px;
+}
+.noticejs-body{
+	height:50px;
+	line-height: 30px;	
+}

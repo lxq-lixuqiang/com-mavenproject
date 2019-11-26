@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.accp.mapper.MessageFeedbackMapper">
+ 	<select id="findMessageFeedbackByType" resultType="MessageFeedback">
+ 		select 
+ 			*
+ 		from 
+ 			user_messageFeedback
+ 		where 
+ 			1=1
+ 		<if test="type != null and type != -1">
+ 			and type=#{type}
+ 		</if>
+ 		<if test="title != null and title.length() >0">
+ 			and title like concat('%',#{title},'%')
+ 		</if>
+ 		order by
+ 			dateTime desc
+ 	</select>	
+  </mapper>

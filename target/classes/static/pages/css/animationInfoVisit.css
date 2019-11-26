@@ -1,0 +1,102 @@
+.address{
+	padding-top:15px;
+}
+body{
+	background-color:#fff;
+}
+.header,.cntrolFormat{
+	width:100%;
+}
+.headerFormat{
+	height:50px;
+}
+#log{
+	background-color:#1E222D;
+}
+#log>div{
+	width:1000px;
+	margin:0 auto;
+	padding:30px 0;
+}
+.section{
+	width:1000px;
+	margin:0 auto;
+}
+.animationInfo{
+	margin-top:30px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.animationInfo>div{
+	float:left;
+}
+.animationInfo>div:first-of-type>img{
+	width:200px;
+	height:285px;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+.animationInfo>div:last-of-type{
+	width:750px;
+}
+.animationInfo>div:last-of-type>h3{
+	color:#FE7322;
+	padding:0;
+	margin:0;
+	margin-bottom: 10px;
+}
+.animationInfo>div:last-of-type>p{
+	color:#848989;
+	line-height: 25px;
+}
+.animation>p{
+	border-bottom:2px solid #F2F2F2;
+	height: 50px;
+	line-height: 50px;
+}
+.animation>p>span{
+	font-size: 22px;
+	margin-left: 10px;
+	padding:0 10px;
+	background-color: #fff;
+	border:2px solid #F2F2F2;
+	border-bottom:2px solid #fff;
+	border-radius: 10px 10px 0 0;
+	display:inline-block;
+	height: 50px;
+	line-height: 50px;
+}
+.animation>div{
+	height: 360px;
+	overflow: auto;
+	margin-bottom: 20px;
+}
+.animation>div ul{
+	overflow: hidden;
+}
+.animation>div li{
+	border-bottom:2px dashed #F0F0F0;
+	width:460px;
+	float:left;
+	height: 30px;
+	line-height: 30px;
+	margin:20px 10px 0px 20px;
+	overflow: hidden;
+}
+.animation>div li>a{
+	display: inline-block;
+	text-decoration: none;
+	height:23px;
+	line-height:23px;
+	color:#000;
+	margin-left:5px;
+	margin-right:10px;
+	border-radius: 5px;
+	padding:0 10px;
+	transition:all 0.2s;
+}
+.animation>div li>a:hover{
+	background-color: #FF6688;
+	color:#fff;
+}
+

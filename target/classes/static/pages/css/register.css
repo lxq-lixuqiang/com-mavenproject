@@ -1,0 +1,71 @@
+#bodyImg{
+	position: fixed;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index: -1;
+}
+.backgroundColor{
+	height:50px;
+	width:100%;
+	position: fixed;
+	top:0;
+	left:0;
+	opacity:0.7;
+	background-color:#fff;
+	box-shadow: 0px 1px 4px #A8A8A8;
+}
+#background{
+	opacity: 0;
+}
+.section{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+}
+.sectionTable{
+	position: relative;
+}
+.section table{
+	padding:15px 15px 0;
+	background-color:#fff;
+	position: absolute;
+	top:170px;
+	left:-40px;
+	border-radius: 10px;
+	box-shadow: 2px 5px 10px #333;
+	opacity: 0.9;
+	width:320px;
+}
+.right{
+	text-align: right;
+	font-size:22px;
+}
+.buttonHeader{
+	height:40px;
+	line-height: 40px;
+	padding-top:16px;
+}
+.buttonHeader input{
+	margin-left:35px;
+	width:217px;
+	height:40px;
+}
+.text-center{
+	text-align: center;
+}
+.registerClass{
+	height:30px;
+	line-height: 20px;
+	padding-bottom:15px;
+	padding-left:37px;
+	font-size:14px;
+}
+.registerClass a{
+	color:#0EA5FF;
+	text-decoration: none;
+}
+.registerClass a:hover{
+	text-decoration: underline;
+}

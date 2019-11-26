@@ -1,0 +1,89 @@
+.ulClass li a{
+	font-size:16px;
+}
+.address{
+	padding-top:15px;
+}
+body{
+	background-color:#202020;
+}
+.header,.cntrolFormat{
+	width:100%;
+}
+.headerFormat{
+	height:30px;
+}
+.section{
+	width:1000px;
+	margin:0 auto;
+}
+#log{
+	background-color:#1E222D;
+}
+#log>div{
+	width:1000px;
+	margin:0 auto;
+	padding:30px 0;
+}
+#log>div>h1{
+	color:#fff;
+	border-radius: 6px;
+	font-weight: bold;
+	height:60px;
+	line-height: 60px;
+	width:150px;
+	background-color:#EB6329;
+	text-align: center;
+}
+.section>h2{
+	color:#CCCCCC;
+	font-weight: bold;
+	text-align: center;
+}
+.section>h2>span{
+	font-size:24px;
+}
+.section>p{
+	color:#818181;
+}
+.section>p>a{
+	float: right;
+	color:#F87A08;
+}
+.section_imgSize{
+	text-align: center;
+	margin-bottom:20px;
+	position: relative;
+}
+.paging>h3{
+	overflow: hidden;
+}
+.paging>h3>a{
+	float: right;
+	color:#BB6328;
+	margin:0 10px;
+}
+.paging>h4{
+	color:#CCCCCC;
+}
+.pagingClass{
+	padding-left:30px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.pagingClass li{
+	float:left;
+	padding:10px;
+}
+.pagingClass a{
+	color:#ccc;
+	font-size: 18px;
+}
+.pagingClass .notA{
+	color:red;
+	text-decoration: none;
+	cursor: default;
+}
+#ImgClass{
+	opacity: 0;
+}

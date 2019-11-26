@@ -1,0 +1,255 @@
+.ulClass li a{
+	font-size:16px;
+}
+.address{
+	padding-top:15px;
+}
+body{
+	background-color:#fff;
+}
+.header,.cntrolFormat{
+	width:100%;
+}
+.headerFormat{
+	height:50px;
+}
+#log{
+	background-color:#1E222D;
+}
+#log>div{
+	width:1000px;
+	margin:0 auto;
+	padding:30px 0;
+}
+.section{
+	width:1000px;
+	margin:0 auto;
+}
+.musicSingerClass{
+	margin:10px 0;
+	border:1px solid #ADADAD;
+	overflow: hidden;
+}
+.musicSingerClass>div{
+	float: left;
+}
+.musicSingerClass>div>img{
+	width:142px;
+	height:142px;
+}
+.musicSingerClass>div>h3{
+	margin-top:10px;
+	margin-left:30px;
+	font-weight: bold;
+}
+.musicSingerClass>div:last-of-type{
+	width:830px;
+}
+.musicSingerClass>div>p{
+	margin-left:30px;
+	font-size: 14px;
+}
+.musicUlClass{
+	border-bottom:4px solid #C2C2C2;
+	overflow: hidden;
+}
+.musicUlClass>li{
+	float:left;
+	padding:5px 10px;
+	cursor: pointer;
+	font-size: 16px;
+	margin:0 10px;
+	font-weight: bold;
+}
+.musicClass{
+	height:480px;
+	overflow: hidden;
+}
+.musicClass>ul{
+	height: 423px;
+}
+.musicClass>ul>li{
+	padding:5px;
+	font-size: 16px;
+	position: relative;
+	height: 33px;
+}
+.musicClass>ul>li:hover{
+	background-color:#DAF1FB;
+}
+.musicClass>p{
+	text-align: center;
+	cursor: default;
+	padding:10px;
+}
+.musicClass>p>label{
+	cursor: pointer;
+	width:20px;
+	height: 20px;
+	line-height:20px;
+	font-size:22px;
+	opacity: 0.5;
+	display: inline-block;
+}
+.musicClass>p>label:hover{
+	opacity: 1;
+}
+.playLoad{
+	margin:0 10px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+.playLoad>img{
+	margin-bottom:3px;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+.musicClass>ul>li>span:nth-of-type(2){
+	margin:0 40px;
+	display:inline-block;
+	vertical-align: top;
+}
+.playMusic{
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:7px;
+	right:175px;
+	cursor: pointer;
+	background: url(../img/common/icon_splice.png) 4px 2px no-repeat;
+}
+.playMusic:hover{
+	background-position: 4px -58px;
+}
+.downloadMusic{
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top:7px;
+	right:140px;
+	cursor: pointer;
+	background: url(../img/common/icon_splice.png) -87px 2px no-repeat;
+}
+.downloadMusic:hover{
+	background-position: -87px -58px;
+}
+.musicClass>ul>li>span:last-of-type{
+	float: right;
+	margin:0 30px;
+}
+.musicClass>div,.musicMVClass>div{
+	text-align: center;
+}
+.musicClass>div>img,.musicMVClass>div>img{
+	margin-top:70px;
+}
+
+.musicMVClass{
+	display: none;
+	height: 365px;
+}
+.music03>ul{
+	overflow: hidden;
+	height: 316px;
+}
+.music03>ul>li{
+	float:left;
+	margin:20px 10px 0 15px;
+}
+.music03>ul>li>a{
+	display: inline-block;
+	width:170px;
+	text-decoration: none;
+	color:#333;
+}
+.music03>ul>li>a>span:first-of-type{
+	border:1px solid #CCCCCC;
+	display: block;
+	padding:5px;
+	box-shadow:2px 2px 6px #999;
+	position: relative;
+}
+.music03>ul>li>a>span>img{
+	width:160px;
+	height:90px;
+}
+.music03>ul>li>a>span>.playMv{
+	display: inline-block;
+	position: absolute;
+	bottom:0;
+	right:5px;
+	width:33px;
+	height: 33px;
+	background: url(../img/common/play.png) no-repeat;
+	border-radius: 50%;
+	opacity: 0;
+	transition:all 0.3s;
+}
+.music03>ul>li>a>span:hover>.playMv{
+	opacity: 1;
+}
+.music03>ul>li>a>label{
+	display: block;
+	padding-left:10px;
+	height:30px;
+	line-height: 35px;
+	font-weight: normal;
+	cursor: pointer;
+}
+.music03>ul>li>a>label:hover{
+	text-decoration: underline;
+}
+.music03>p{
+	text-align: center;
+	cursor: default;
+	width:100%;
+	font-size: 16px;
+	
+}
+.music03>p>label{
+	cursor: pointer;
+	width:20px;
+	height: 20px;
+	line-height:20px;
+	font-size:22px;
+	opacity: 0.5;
+	display: inline-block;
+}
+.music03>p>label:hover{
+	opacity: 1;
+}
+
+#musicPlay{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width:100%;
+	background:linear-gradient(to bottom,#fff,#D8EAEC,#59DEE9);
+	box-shadow:0px -1px 5px #A8A8A8;
+}
+#musicPlay>div:first-of-type{
+	margin:0 auto;
+	width:500px;
+	position: relative;
+	height: 0px;
+	text-align: center;
+	left:-18px;
+}
+#player{
+	margin:0 auto;
+	width:600px;
+	height: 70px;
+}
+#SingerName{
+	font-size: 13px;
+}
+#vpplayer{
+	border-width: 0;
+	box-shadow:0 0 0 #fff;
+	transition:all 0.1s;
+}

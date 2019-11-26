@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.MusicMVMapper">
+  <select id="findAllMusicMV" resultType="MusicMV" >
+  	select 
+  		*
+  	from 
+  		music_mv
+  	where
+  		1=1
+  		<if test="musicSingerId !=null and musicSingerId != -1">
+  			and singerId=#{musicSingerId}
+  		</if>
+  		<if test="themeName!=null and themeName.length()>0">
+  			and themeName like concat('%',#{themeName},'%')
+  		</if>
+  </select>
+  
+  <update id="update" parameterType="musicMV" >
+  	update 
+  		music_mv
+  	set
+  		<if test="themePicture != null and themePicture.length() > 0">
+  			themePicture=#{themePicture},
+  		</if>
+  		themeName=#{themeName},
+  		<if test="mv != null and mv.length > 0">
+  			mv=#{mv},
+  		</if>
+  		date=#{date}
+  	where
+  		id=#{id}
+  </update>
+  
+  <select id="findTopMusicMV" resultMap="SongNameAndMusicMV">
+  	select
+  		 *
+  	from
+  		 music_mv
+  	inner join
+  		 music_singer
+  	on
+  		music_mv.singerId=music_singer.id
+  	order by
+  		date desc
+  	limit 
+  		#{pageNum},#{pageSize}
+  </select>
+  <resultMap id="SongNameAndMusicMV" type="MusicMV">
+  		<result property="musicSinger.name" column="name"/>
+  </resultMap>
+</mapper>

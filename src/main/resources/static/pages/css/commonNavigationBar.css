@@ -1,0 +1,24 @@
+.ulClass>li{
+	display: none;
+}
+.table-responsive,#pClass{
+	font-size:15px;
+}
+.position-relative{
+	position: relative;
+}
+.error{
+	position: absolute;
+	bottom:-10px;
+	left:10px;
+	font-size:14px;
+	color:red;
+}
+
+.noticejs-content{
+	font-size:16px;
+}
+.noticejs-body{
+	height:50px;
+	line-height: 30px;	
+}

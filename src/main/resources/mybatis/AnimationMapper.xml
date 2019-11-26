@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.AnimationMapper">
+	<select id="findAnimationBySetName" resultType="Animation">
+		select
+			*
+		from 
+			t_animation
+		where 
+			1=1
+		<if test="setName != null and setName.length() >0">
+			and setName like concat('%',#{setName},'%')
+		</if>
+		<if test="animationInfoId != null">
+			and animationInfoId = #{animationInfoId}
+		</if>
+		order by
+			dateTime asc
+	</select>
+	
+	<update id="update" parameterType="Animation">
+		update 
+			t_animation
+		set
+			setName=#{setName},
+			dateTime=#{dateTime}
+			<if test="animation != null and animation.length() >0">
+				,animation=#{animation}
+			</if>
+			<if test="animationPath != null and animationPath.length() >0">
+				,animationPath=#{animationPath}
+			</if>
+		where
+			id=#{id}
+	</update>
+	
+</mapper>

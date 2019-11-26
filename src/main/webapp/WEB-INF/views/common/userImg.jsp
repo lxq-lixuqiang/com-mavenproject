@@ -1,0 +1,2 @@
+<%@ page pageEncoding="UTF-8"%>
+<div class="loginHeader"><img alt="登录" src="${pageContext.request.contextPath}/assets/pages/img/headPicture/${sessionScope.loginUser.userHeadPicture.headPicture}"></div>

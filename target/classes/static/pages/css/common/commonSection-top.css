@@ -1,0 +1,45 @@
+.section{
+	padding:10px 0;
+	background-color:#F7F7F7;
+}
+.headerFormat{
+	height:200px;
+}
+.loginHeader img{
+	height: 200px;
+	width:1000px;
+}
+.section-top ul li{
+	display: inline-block;
+	text-align: center;
+	margin-left:15px;
+	height: 40px;
+	line-height: 40px;
+	width:90px;
+}
+.click{
+	border-bottom:3px solid #FF9F00;
+}
+.click a{
+	color:#FF9F00;
+	cursor: default;
+}
+.noClick{
+	border-bottom:3px solid #F7F7F7;
+}
+.noClick a{
+	color:#000;
+}
+.mover{
+	border-bottom:3px solid #FF9F00;
+}
+.mover a{
+	color:#000;
+}
+.section-top ul li a{
+	display: inline-block;
+	text-decoration: none;
+	height: 40px;
+	line-height: 40px;
+	width:90px;
+}

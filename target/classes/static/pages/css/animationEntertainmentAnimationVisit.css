@@ -1,0 +1,45 @@
+.ulClass li a{
+	font-size:16px;
+}
+.address{
+	padding-top:15px;
+}
+body{
+	background-color:#000000;
+}
+.header,.cntrolFormat{
+	width:100%;
+}
+.headerFormat{
+	height:50px;
+}
+#log{
+	background-color:#1E222D;
+}
+#log>div{
+	width:1000px;
+	margin:0 auto;
+	padding:30px 0;
+}
+#log>div>h1{
+	color:#fff;
+	border-radius: 6px;
+	font-weight: bold;
+	height:60px;
+	line-height: 60px;
+	width:150px;
+	background-color:#EB6329;
+	text-align: center;
+}
+.section{
+	width:1000px;
+	margin:0 auto;
+}
+.section>h2{
+	color:#CCCCCC;
+	font-weight: bold;
+	text-align: center;
+}
+.videoClass{
+	margin-bottom:20px;
+}

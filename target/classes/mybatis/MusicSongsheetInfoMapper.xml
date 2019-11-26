@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.accp.mapper.MusicSongsheetInfoMapper">
+ 	<select id="findMusicSongsheetInfoBySongsheetId" resultMap="MusicSongsheetInfoAndMusic">
+	 	SELECT 
+			songName,name,music,date
+		 FROM 
+			music_songsheetinfo
+		 INNER JOIN
+			t_music
+		 ON
+			music_songsheetinfo.musicId=t_music.id
+		 INNER JOIN
+			music_singer
+		 ON
+			t_music.singerId=music_singer.id
+		 WHERE
+		 	<if test="songsheetId !=null">
+				songsheetId=#{songsheetId}
+			</if>
+			<if test="name != null and name.length() > 0">
+				 AND 
+					songName LIKE CONCAT('%',#{name},'%')
+				 OR
+					NAME LIKE CONCAT('%',#{name},'%')
+			</if>
+ 	</select>
+  	<resultMap id="MusicSongsheetInfoAndMusic" type="Music">
+  		<result property="musicSinger.name" column="name"/>
+  	</resultMap>
+  </mapper>

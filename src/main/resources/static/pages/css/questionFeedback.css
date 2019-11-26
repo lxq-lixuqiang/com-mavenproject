@@ -1,0 +1,60 @@
+.ulClass li a,.sectionTopMover li a{
+	font-size:16px;
+}
+.address{
+	padding-top:15px;
+}
+
+.section-botton{
+	width:960px;
+	box-sizing:border-box;
+	margin:20px;
+	padding:10px 20px;
+	background-color:#fff;
+	height: 430px;
+}
+#form{
+	width:430px;
+	margin:0 auto;
+}
+.inputClass{
+	width:270px;
+}
+.inputClass textarea{
+	height: 120px;
+	resize:none;
+}
+.inputClass>label{
+	background-color:#fff;
+}
+.textCenter{
+	padding-left:40px;
+}
+.textCenter a,.textCenter>button:last-of-type{
+	margin-left:20px;
+}
+.input-group{
+	margin:20px 0;
+}
+.radiobuttonClass{
+	font-size:16px;
+}
+#type1,#type2{
+	margin-left:20px;
+}
+.radiobuttonClass .help-block{
+	float:right;
+	padding-left:10px;
+}
+.errorInfo{
+	color:red;
+	font-size:10px;
+}
+
+.noticejs-content{
+	font-size:16px;
+}
+.noticejs-body{
+	height:50px;
+	line-height: 30px;	
+}

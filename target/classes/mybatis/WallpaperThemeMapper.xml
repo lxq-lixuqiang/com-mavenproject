@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.WallpaperThemeMapper">
+	<select id="findAllWallpaperTheme" resultMap="WallpaperThemeAndType">
+		select 
+			*
+		from 
+			wallpaper_theme
+		inner join
+			wallpaper_type
+		on
+			wallpaper_theme.typeId=wallpaper_type.id
+		where 
+			1=1
+		<if test="theme != null and theme.length() >0">
+			And theme like concat('%',#{theme},'%')
+		</if>
+		<if test="typeId != null and typeId !=-1">
+			and typeId =#{typeId}	
+		</if>
+		<if test="date != null">
+			and date =#{date}	
+		</if>
+	</select>
+	<resultMap type="WallpaperTheme" id="WallpaperThemeAndType">
+	  	<id property="wallpaperType.id" column="typeId"/>
+	  	<result property="wallpaperType.name" column="name"/>
+	</resultMap>
+	
+	<select id="findWallpaperThemeById" resultMap="WallpaperThemeAndType">
+		select 
+			*
+		from
+			wallpaper_theme
+		where
+		 id=#{id}
+	</select>
+	
+	<update id="update" parameterType="wallpaperTheme">
+		update 
+			wallpaper_theme 
+		set 
+			<if test=" wallpaper != null and wallpaper.length() >0">
+				wallpaper=#{wallpaper},
+			</if>
+			theme=#{theme},
+			date=#{date},
+			typeId=#{wallpaperType.id} 
+		where id=#{id}
+	</update>
+</mapper>

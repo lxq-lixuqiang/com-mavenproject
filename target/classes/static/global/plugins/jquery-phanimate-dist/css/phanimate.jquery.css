@@ -1,0 +1,42 @@
+.custom-input {
+  position: relative;
+} 
+.custom-input input {
+  padding-left: 15px;
+}
+ 
+.custom-input label {
+  cursor: text;
+  margin: 0;
+  padding: 0;
+  left: 15px;
+  top: 23px;
+  position: absolute;
+  font-size: 14px;
+  color: #ccc;
+  font-weight: normal;
+  transition: all .3s ease;
+  height: 20px;
+  line-height: 20px;
+}  
+.custom-input label.active {
+  top: -5px;
+  left: 0;
+  font-size: 12px;
+}
+.custom-input label.active.focusIn {
+  color: #66afe9;
+}
+
+
+
+
+.tdClass{
+	padding:0 0 0 35px;
+}
+.tdClass>div{
+	margin:3px 0;
+}
+.tableCommenClass .inputyClass>input{
+	width:210px;
+}

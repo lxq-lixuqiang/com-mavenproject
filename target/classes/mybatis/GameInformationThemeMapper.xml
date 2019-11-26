@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.accp.mapper.GameInformationThemeMapper">
+  <select id="findGameInfomationThemeByTheme" resultType="GameInformationTheme">
+    select 
+    	*
+    from 
+    	game_informationTheme
+    <if test="theme != null and theme.length() >0">
+    	where theme like concat('%',#{theme},'%') 
+    </if>
+    order by
+    	date desc
+  </select>
+  
+  <update id="update" parameterType="GameInformationTheme">
+  	update
+  		game_informationTheme
+  	set
+  		<if test="picture != null and picture.length()>0">
+  			picture=#{picture},
+  		</if>
+  		theme=#{theme},
+  		date=#{date}
+  	where
+  		id=#{id}
+  </update>
+</mapper>

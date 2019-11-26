@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.MusicMapper">
+	<select id="findMusicBySingerId" resultType="Music" >
+		select 
+			*
+		from 
+			t_music 
+		where 
+			1=1
+			<if test="singerId != null">
+				and	singerId=#{singerId}
+			</if>
+			<if test="songName != null and songName.length() > 0">
+				and songName like concat('%',#{songName},'%')
+			</if>
+		order by 
+			date desc
+	</select>
+  
+  	<update id="update" parameterType="music">
+  		update
+  			t_music
+  		set
+  			<if test="music !=null and music.length()>0">
+  				music = #{music},
+  			</if>
+  			songName = #{songName},
+  			date = #{date}
+  		where 
+  			id=#{id}
+  	</update>
+  	
+  	<select id="findMusicBySongNameAndSingerName" resultMap="SongNameAndSingerName" >
+		select 
+			*
+		from 
+			t_music 
+		inner join
+			music_singer
+		on
+			t_music.singerId=music_singer.id
+		where 
+			1=1
+			<if test="songName != null and songName.length() > 0 and singerName != null and singerName.length() > 0">
+				and 
+					songName like concat('%',#{songName},'%')
+				or 
+					name like concat('%',#{singerName},'%')
+			</if>
+		order by 
+			date desc
+	</select>
+	<resultMap id="SongNameAndSingerName" type="Music">
+	  	<result property="musicSinger.name" column="name"/>
+	</resultMap>
+</mapper>

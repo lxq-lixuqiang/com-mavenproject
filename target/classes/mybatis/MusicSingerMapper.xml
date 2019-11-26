@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.accp.mapper.MusicSingerMapper">
+	<select id="findAllMusicSinger" resultType="MusicSinger">
+		select 
+			*
+		from 
+			music_singer
+		where 
+			1=1
+			<if test="name != null and name.length() >0">
+				and name like concat('%',#{name},'%')
+			</if>
+			<choose>
+				<when test="sex == 0">and sex = #{sex}</when>
+				<when test="sex == 1">and sex = #{sex}</when>
+			</choose>
+	</select>
+	
+	<update id="update" parameterType="MusicSinger">
+		update 
+			music_singer
+		set
+			name=#{name},
+			sex=#{sex},
+			synopsis=#{synopsis}
+			<if test="singerPicture != null and singerPicture.length() > 0">
+				,singerPicture=#{singerPicture}
+			</if>
+		where
+			id=#{id}
+	</update>
+	
+</mapper>
